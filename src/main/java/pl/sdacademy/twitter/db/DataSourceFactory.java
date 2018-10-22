@@ -7,9 +7,22 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 public class DataSourceFactory {
+	/**
+	 * Creates a default data source.
+	 *
+	 * @return
+	 * @throws SQLException
+	 */
 	public static DataSource createDataSource() throws SQLException {
+		return createH2DataSource();
+	}
+
+	public static DataSource createH2DataSource() throws SQLException {
 		return h2();
-		// return mysql();
+	}
+
+	public static DataSource createMysqlDataSource() throws SQLException {
+		return mysql();
 	}
 
 	private static DataSource mysql() throws SQLException {
