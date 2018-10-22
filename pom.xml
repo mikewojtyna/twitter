@@ -20,6 +20,9 @@
 		<maven-compiler.version>3.7.0</maven-compiler.version>
 		<java.version>1.8</java.version>
 		<mysql.version>8.0.12</mysql.version>
+		<maven-surefire-plugin.version>
+			2.22.0
+		</maven-surefire-plugin.version>
 	</properties>
 
 	<build>
@@ -32,6 +35,11 @@
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}
+				</version>
 			</plugin>
 		</plugins>
 	</build>
